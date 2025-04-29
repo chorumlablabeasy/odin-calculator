@@ -2,6 +2,12 @@ let num1
 let num2
 let operator
 
+const numberButtons = document.querySelectorAll(".number")
+
+let displayElement = document.querySelector(".display")
+
+numberButtons.forEach(button => button.addEventListener("click", event => displayElement.textContent += event.target.textContent))
+
 function add(num1, num2) {
     return num1 + num2
 }
